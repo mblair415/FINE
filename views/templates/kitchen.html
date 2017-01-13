@@ -1,1 +1,57 @@
 <h1>kitchen page</h1>
+<div class="donation-needs container-fluid" ng-controller="donationIndexCtrl as donationIndexCtrl">
+  <form action="index.html" method="post">
+    <section class="">
+      <div class="">
+        <div class="donation-requests row col-xs-6">
+          <div class="container">
+            <div class="row">
+              <div class="input col-xs-2">
+                <input type="number" name="protein-quantity">
+              </div>
+              <div class="food-type col-xs-6">
+                <h4>Servings of protein</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input col-xs-2">
+                <input type="number" name="starch-quantity">
+              </div>
+              <div class="food-type col-xs-6">
+                <h4>Servings of starches</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input col-xs-2">
+                <input type="number" name="veggies-quantity">
+              </div>
+              <div class="food-type col-xs-6">
+                <h4>Servings of veggetables</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="next button col-xs-6 text-center">
+            <button class="btn-primary" type="button" name="button">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pick-up text-center row">
+        <label class="radio-inline">
+          <input type="radio" name="food" value="pick-up">Need Pick Up
+        </label>
+        <label class="radio-inline">
+          <input ng-click="editing=true" type="radio" name="food" value="delivery">Can Deliver
+        </label>
+        <label class="text-center" ng-show="editing">
+          <input type="number" name="distance">
+        </label>
+      </div>
+    </section>
+  </form>
+</div>
+<div class="text-center">
+  <img src="http://www.lifetransplanet.com/wp-content/uploads/2015/07/Bounty-of-the-finca-1.jpg" alt="pretty kitchen picture">
+</div>
