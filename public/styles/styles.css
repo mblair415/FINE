@@ -5,3 +5,7 @@ capital {
 small {
   font-size: 15px;
 }
+
+* {
+  /*border:  1px dashed black;*/
+}

@@ -1,12 +1,12 @@
+console.log('app.js sanity check');
+
 angular
-  .module('fine', [])
+  .module('fine', ['ngRoute'])
   .controller('DonationIndexController', DonationIndexController)
   .controller('KitchenIndexController', KitchenIndexController)
   .controller('MapController', MapController)
   .controller('ProfileController', ProfileController)
-  .module('tunely', ['ngRoute'])
   .config(config);
-
 
   DonationIndexController.$inject = ['$http'];
   function DonationIndexController(){
@@ -23,18 +23,19 @@ angular
     });
 
     vm.createDonation = function () {
-    $http({
-      method: 'POST',
-      url: '/api/donation',
-      data: 'data needed'  // need data!!
-    }).then(function successCallback(response) {
+      $http({  // maybe this is the $http problem
+        method: 'POST',
+        url: '/api/donation',
+        data: 'data needed'  // need data!!
+      }).then(function successCallback(response) {
 
-
-    }, function errorCallback(response) {
-      console.log('There was an error posting the data', response);
-    });
+      }, function errorCallback(response) {
+        console.log('There was an error posting the data', response);
+      });
+    }
 
   }
+
 
   KitchenIndexController.$inject = ['$http'];
   function KitchenIndexController(){
@@ -61,7 +62,7 @@ angular
     url: '/api/map'
     }).then(function successCallback(response) {
     console.log('map page success', response.data)
-    vm.albums = response.data;
+    vm.map = response.data;
     }, function errorCallback(response) {
     console.log('There was an error getting the map data', response);
     });
@@ -87,23 +88,30 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 
 function config ($routeProvider, $locationProvider) {
   $routeProvider
-    .when('/'){
-
-    }
+    .when('/',{
+      templateUrl:'',
+      controllerAs: '',
+      controller: ''
+    })
     .when('/donation', {
       templateUrl: '/templates/donation',
-      controllerAs: 'donationIndexCtrl',
-      controller: 'DonationIndexController'
+      controller: 'DonationIndexController',
+      controllerAs: 'donationIndexCtrl'
     })
-    .when('/kitchen ', {
+    .when('/kitchen', {
       templateUrl: '/templates/kitchen',
-      controllerAs: 'kitchenIndexCtrl',
-      controller: 'kitchenIndexController'
+      controller: 'kitchenIndexController',
+      controllerAs: 'kitchenIndexCtrl'
     })
-    .when('/albums/:id', {
-      templateUrl: '/templates/albums-show',
-      controllerAs: 'albumsShowCtrl',
-      controller: 'AlbumsShowController'
+    .when('/profile', {
+      templateUrl: '/templates/profile',
+      controller: 'ProfileController',
+      controllerAs: 'profileCtrl'
+    })
+    .when('/map', {
+      templateUrl: '/templates/map',
+      controller: 'MapController',
+      controllerAs: 'mapCtrl'
     })
 
     $locationProvider.html5Mode({

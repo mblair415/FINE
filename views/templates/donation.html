@@ -1,0 +1,39 @@
+<h1>donation page</h1>
+<div class="text-center">
+  <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR4TOQte0xAxYEMPto5np7edsQUFRW2pyM-EV-uvGL9viH2PiKEtA" alt="pretty donation picture">
+</div>
+<div class="donation-needs container-fluid" ng-controller="donationIndexCtrl as donationIndexCtrl">
+  <form class="" action="index.html" method="post">
+    <section class="">
+      <div class="pick-up text-center row">
+        <label class="radio-inline">
+          <input type="radio" name="food" value="pick-up">Need Pick Up
+        </label>
+        <label class="radio-inline">
+          <input ng-click="editing=true" type="radio" name="food" value="delivery">Can Deliver
+        </label>
+        <label class="text-center" ng-show="editing">
+          <input type="number" name="distance">
+        </label>
+      </div>
+      <div class="">
+        <div class="donation-requests row col-xs-6">
+          <div class="container">
+            <div class="row">
+              <div class="input col-xs-2">
+                <input type="number" name="chicken-quantity">
+              </div>
+              <div class="food-type col-xs-6">
+                <h4>Servings of chicken</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="next button col-xs-6 text-center">
+          <button class="btn-primary" type="button" name="button">Next</button>
+        </div>
+      </div>
+
+    </section>
+  </form>
+</div>
