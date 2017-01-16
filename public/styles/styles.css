@@ -1,11 +1,31 @@
-capital {
-  font-size: 40px;
+/** {
+  border:  1px dashed black;
+}*/
+
+.title-area {
+  font-family: 'Lemonada', cursive;
+  color: #C0B282;
+  background-color: #98848D;
+  margin-left: 5%;
+  border: 1px solid #9099A2;
+  border-radius: 10px;
+  margin-top: 0px;
+  min-width: 220px;
+  max-width: 300px;
+}
+h1 {
+  font-weight: bold;
 }
 
-small {
-  font-size: 15px;
+h5 {
+  font-family: "Dancing+Script", cursive;
 }
 
-* {
-  /*border:  1px dashed black;*/
+body {
+  background-color: #F4F4F4;
+}
+
+#map {
+  height: 300px;
+  width: 400px;
 }
