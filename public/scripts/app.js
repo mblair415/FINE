@@ -11,10 +11,12 @@ function initMap() {
   var myLatLng = {lat: 37.791432, lng: -122.395490};
 
   var donationMarkers = [{
-      position: {lat: 37.791432,
+      position: {
+        lat: 37.791432,
         lng: -122.395490
       },
       name: 'Terminus BBQ House',
+      slogan: "If it's not in you, you will be in it!",
       map: map,
       address: '278 Mission Street',
       image: 'http://shirtigo.co/wp-content/uploads/2014/10/visitterminus.jpg',
@@ -29,10 +31,12 @@ function initMap() {
         quantity: 45
       }]
     },{
-        position: {lat: 37.794571,
+        position: {
+          lat: 37.794571,
           lng: -122.403886
         },
         name: "McDowell's",
+        slogan: "Please don't sue.",
         map: map,
         address: '643 Clay Street',
         image: 'https://s3-media1.fl.yelpcdn.com/bphoto/CgDY1IFo7MCBN948JI2klg/ls.jpg',
@@ -50,12 +54,14 @@ function initMap() {
   ]
 
   var kitchenMarkers = [{
-    position: {lat: 37.7961798,
+    position: {
+      lat: 37.7961798,
       lng: -122.3982746
     },
     name: 'Ewe For You Soup Kitchen',
     map: map,
     addresss: '152 Washington Street',
+    slogan: 'Have some ewe, so you can be the best you that you can be.'
     image: 'http://static1.squarespace.com/static/569e6caa9cadb6436a93d988/t/56a82bab40667aecb252adbe/1480091987541/',
     requesting: {
       starchRequest: 25,
@@ -67,36 +73,32 @@ function initMap() {
     }
   }]
 
-  var marker = new google.maps.Marker({
-	  position: myLatLng,
-	  map: map,
-	  title: 'Hello World!'
-  });
-  console.log("do i have a marker? ", marker)
-
   function showHit(data){  // call with kitchenMarkers or donationMarkers as data
-    console.log('you found stuff on your map!');
+    console.log('you found stuff on your map!', data);
     data.forEach(function(spot){
       var location = {
-        lat: spot.position.latitude,
-        lng: spot.position.longitude
+        lat: spot.position.lat,
+        lng: spot.position.lng
       }
       // this is the content that goes on the card associated with each searhed location on the map
       var content = '<div class="container-fluid col-xs-4"><section class="row"><article class="name col-xs-6"><h5>' + spot.name +
       '</h5></article><article class="image col-xs-6"><img src=' + spot.image +
-      '></article></section><section class="row"><article class="give-take col-xs-6"><img src="http://cloud.addictivetips.com/wp-content/uploads/2009/12/Pie-Chart.jpg"></article><article class="give-take-address"><h6>'
-      + spot.address + '</h6></article></section></div>'
-      addMarker(location, content)
+      '></article></section><section class="row"><article class="give-take col-xs-6"><img src=""></article><article class="give-take-address"><h6>'
+      + spot.address + '</h6></article></section></div>';
+      addMarker(location, content);
     })
   }
 
   // places a marker on the map for each spot
   function addMarker(position, content){
-    var myLatlng, marker, infowindow,contentString;
+    console.log('marker added! ', position);
+    console.log('marker has content! ', content);
+    var myLatlng, marker, infowindow, contentString;
     // places each marker
     marker = new google.maps.Marker({
       position: position,
-      map: map
+      map: map,
+      animation: google.maps.Animation.DROP
     });
     // fills in data for the card that appears when clicking on any marker
     contentString = content;
@@ -109,6 +111,8 @@ function initMap() {
      infowindow.open(map, marker);
     });
   }
+  showHit(donationMarkers);
+
 
   // var marker = donationMarkers.forEach(new google.maps.Marker);
 }
