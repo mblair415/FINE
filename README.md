@@ -4,10 +4,11 @@ It's ugly, it doesn't work well and it's a fraction of what I hoped to complete,
 ### Design Team
 Iva Kim
 <linkedin link will go here when it's provided by UX>
-[Imgur](http://i.imgur.com/nEuadWq.png)
+![alt tag]http://i.imgur.com/nEuadWq.png
 ![homepage](https://i.imgur.com/89gjzo6.png "Homepage")
 ![alt tag](http://imgur.com/a/vHkjK)
 ![alt tag](http://imgur.com/a/4rNaG)
+![alt tag] (http://i.imgur.com/nEuadWq.png)
 
 Martín Vercellino
 <linkedin link will go here when it's provided by UX>
