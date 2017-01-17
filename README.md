@@ -1,6 +1,9 @@
 ## A dumpster fire of an angular app
 It's ugly (my fault not the design team's fault), it doesn't work well and it's a fraction of what I hoped to complete, but at least it took a lot of time.  It was an impactful learning experience for certain.
 
+A link to this almost entirely non functional application on heroku:
+https://dashboard.heroku.com/apps/busted-angular
+
 ### Design Team
 ###Iva Kim
 -linkedin link will go here when it's provided by UX-
