@@ -188,7 +188,9 @@ angular
 
   // var map = angular.module
   MapController.$inject = ['$http'];
-  function MapController($http){
+  function MapController($http, donationMarkers){
+    console.log('map controller')
+    console.log('donations are ', donationMarkers)
     var vm = this;
 
     $http({

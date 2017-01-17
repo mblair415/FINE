@@ -5,12 +5,9 @@
       <div class="pull-center" id="map"></div>
     </div>
     <div class="resources col-xs-12 col-md-6" ng-repeat="donation in mapCtrl.donationMarkers">
-      <p><b>{{name}}</b> {{slogan}}</p>
-      <p>{{address}}</p>
-      <img src="{{image}}" alt="company logo">
-    </div>
-    <div class="organizations" ng-repeat="">
-
+      <p><b>{{donation.name}}</b> {{donation.slogan}}</p>
+      <p>{{donation.address}}</p>
+      <img src="{{donation.image}}" alt="company logo">
     </div>
   </div>
 </div>
