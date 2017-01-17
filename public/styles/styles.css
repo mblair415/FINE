@@ -2,6 +2,7 @@
   border:  1px dashed black;
 }*/
 
+/*index page*/
 .title-area {
   font-family: 'Lemonada', cursive;
   color: #FFF299;
@@ -33,18 +34,6 @@ body {
 .btn {
   background-color: #98848D;
   color: #FFF299;
-}
-
-/*map page*/
-#map {
-  height: 300px;
-  width: 400px;
-}
-
-/*donation page*/
-.donation-hero {
-  width: 100%;
-  max-height: 300px;
 }
 
 /*welcome page*/
@@ -89,4 +78,16 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   display: inline;
   font-family: 'Lemonada', cursive;
+}
+
+/*map page*/
+#map {
+  height: 300px;
+  width: 400px;
+}
+
+/*donation page*/
+.donation-hero {
+  width: 100%;
+  max-height: 300px;
 }
