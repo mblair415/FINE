@@ -61,7 +61,7 @@ function initMap() {
     name: 'Ewe For You Soup Kitchen',
     map: map,
     addresss: '152 Washington Street',
-    slogan: 'Have some ewe, so you can be the best you that you can be.'
+    slogan: 'Have some ewe, so you can be the best you that you can be.',
     image: 'http://static1.squarespace.com/static/569e6caa9cadb6436a93d988/t/56a82bab40667aecb252adbe/1480091987541/',
     requesting: {
       starchRequest: 25,
@@ -81,10 +81,10 @@ function initMap() {
         lng: spot.position.lng
       }
       // this is the content that goes on the card associated with each searhed location on the map
-      var content = '<div class="container-fluid col-xs-4"><section class="row"><article class="name col-xs-6"><h5>' + spot.name +
-      '</h5></article><article class="image col-xs-6"><img src=' + spot.image +
-      '></article></section><section class="row"><article class="give-take col-xs-6"><img src=""></article><article class="give-take-address"><h6>'
-      + spot.address + '</h6></article></section></div>';
+      var content = '<div class="map-card"><h6>' + spot.name +
+        '</h6><h6>' + spot.address +
+        '</h6><h5>' + spot.slogan +
+        '</h5></div>'
       addMarker(location, content);
     })
   }
@@ -132,10 +132,10 @@ angular
 
     $http({
     method: 'GET',
-    url: '/api'
+    url: '/'
     }).then(function successCallback(response) {
     console.log('landing page success')
-    vm.landing = response.data;
+    // vm.landing = response.data;
     }, function errorCallback(response) {
     console.log('There was an error getting the landing data', response);
     });
@@ -209,7 +209,7 @@ config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/',{
-      template: '/templates/landing',
+      templateUrl: '/templates/landing',
       controller: 'LandingController',
       controllerAs: 'LandingCtrl'
     })

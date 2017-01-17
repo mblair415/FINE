@@ -4,7 +4,7 @@
 
 .title-area {
   font-family: 'Lemonada', cursive;
-  color: #C0B282;
+  color: #FFF299;
   background-color: #98848D;
   margin-left: 5%;
   border: 1px solid #9099A2;
@@ -13,6 +13,7 @@
   min-width: 220px;
   max-width: 300px;
 }
+
 h1 {
   font-weight: bold;
 }
@@ -25,12 +26,67 @@ body {
   background-color: #F4F4F4;
 }
 
+.navbar-oneday {
+  margin-right: 5%;
+}
+
+.btn {
+  background-color: #98848D;
+  color: #FFF299;
+}
+
+/*map page*/
 #map {
   height: 300px;
   width: 400px;
 }
 
-.image {
-  max-width: 20px;
-  max-height: 10px;
+/*donation page*/
+.donation-hero {
+  width: 100%;
+  max-height: 300px;
+}
+
+/*welcome page*/
+.welcome {
+  background-color: rgba(243,222,205,0.5);
+  border: 1px solid #93628F;
+  border-radius: 15px 50px 15px;
+}
+
+.donate-food-image1 {
+  width: 200px;
+  height: 550px;
+  overflow: hidden;
+}
+
+.donate-food-title {
+  position: absolute;
+  top: 1px;
+  color: #FFF299;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline;
+  font-family: 'Lemonada', cursive;
+}
+
+.kitchen-to-serve-image1 {
+  width: 200px;
+  height: 550px;
+  overflow: hidden;
+}
+
+.img1 img, .img2 img {
+  width: 100%;
+  position: relative;
+}
+
+.kitchen-to-serve-title {
+  position: absolute;
+  top: 1px;
+  color: #FFF299;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline;
+  font-family: 'Lemonada', cursive;
 }
