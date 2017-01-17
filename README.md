@@ -4,7 +4,7 @@ It's ugly, it doesn't work well and it's a fraction of what I hoped to complete,
 ### Design Team
 Iva Kim
 <linkedin link will go here when it's provided by UX>
-![alt tag](http://imgur.com/a/5py2e "kitchen")
+![alt tag](http://imgur.com/a/5py2e.png "kitchen")
 ![homepage](https://i.imgur.com/89gjzo6.png "Homepage")
 ![alt tag](http://imgur.com/a/vHkjK)
 ![alt tag](http://imgur.com/a/4rNaG)
